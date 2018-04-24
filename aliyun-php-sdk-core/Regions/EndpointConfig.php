@@ -54,11 +54,11 @@ foreach ($json_array["Endpoint"] as $json_endpoint) {
 
     $product_domains = array();
     foreach ($products as $product) {
-        $product_domain = new ProductDomain($product['ProductName'], $product['DomainName']);
+        $product_domain = new \Core\Regions\ProductDomain($product['ProductName'], $product['DomainName']);
         array_push($product_domains, $product_domain);
     }
 
-    $endpoint = new Endpoint($region_ids[0], $region_ids, $product_domains);
+    $endpoint = new \Core\Regions\Endpoint($region_ids[0], $region_ids, $product_domains);
     array_push($endpoints, $endpoint);
 }
 

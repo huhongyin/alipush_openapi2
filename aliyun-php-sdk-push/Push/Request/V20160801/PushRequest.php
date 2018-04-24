@@ -18,8 +18,9 @@
  * under the License.
  */
 namespace Push\Request\V20160801;
+use Core\RpcAcsRequest;
 
-class PushRequest extends \RpcAcsRequest
+class PushRequest extends RpcAcsRequest
 {
 	function  __construct()
 	{
